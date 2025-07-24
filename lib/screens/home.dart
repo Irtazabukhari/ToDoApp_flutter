@@ -18,13 +18,13 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    todolist = ToDo.todolist(); // Initialize once
+    todolist = ToDo.todolist();
     _foundtoDo = todolist;
   }
 
   @override
   void dispose() {
-    _toDoController.dispose(); // Clean up controller
+    _toDoController.dispose();
     super.dispose();
   }
 
@@ -112,8 +112,8 @@ class _HomeState extends State<Home> {
           ),
         );
       });
-      Navigator.pop(context); // Close the bottom sheet
-      _toDoController.clear(); // Clear input field
+      Navigator.pop(context);
+      _toDoController.clear();
     }
   }
 

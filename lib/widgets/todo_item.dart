@@ -11,8 +11,8 @@ class ToDoItems extends StatelessWidget {
   });
 
   final ToDo todo;
-  final Function(ToDo) onToDoChanged; // Explicitly typed as Function(ToDo)
-  final Function() onDelete; // Explicitly typed for clarity
+  final Function(ToDo) onToDoChanged;
+  final Function() onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,6 @@ class ToDoItems extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
-          // Debug print to confirm tap
           onToDoChanged(todo);
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
